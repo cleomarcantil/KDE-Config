@@ -4,29 +4,6 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1707x960=
-ItemGeometries-2048x1152=
-ItemGeometriesHorizontal=
-activityId=a17143d8-7c0f-4003-a3e2-926598f9eb5a
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][2]
-ItemGeometries-2259x1271=
-ItemGeometriesHorizontal=
-activityId=a17143d8-7c0f-4003-a3e2-926598f9eb5a
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
 [Containments][3]
 activityId=
 formfactor=2
@@ -136,18 +113,6 @@ network/all/upload=Upload
 
 [Containments][3][Applets][32][Configuration][Sensors]
 highPrioritySensorIds=["network/all/download","network/all/upload"]
-
-[Containments][3][Applets][33]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][3][Applets][33][Configuration]
-CurrentPreset=org.kde.plasma.systemmonitor
-popupHeight=400
-popupWidth=560
-
-[Containments][3][Applets][33][Configuration][Appearance]
-chartFace=org.kde.ksysguard.piechart
 
 [Containments][3][Applets][34]
 immutability=1
@@ -329,7 +294,28 @@ extraItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.kscreen,org.kde.plasm
 knownItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.weather
 
 [Containments][3][General]
-AppletOrder=30;31;35;34;32;29;4;5;6;28;7;8;23;24;33
+AppletOrder=30;31;35;34;32;29;4;5;6;28;7;8;23;24
+
+[Containments][36]
+ItemGeometries-1707x960=
+ItemGeometries-2048x1152=
+ItemGeometriesHorizontal=
+activityId=fd3b8b97-86a3-4233-8d39-c261ba683744
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][37]
+activityId=fd3b8b97-86a3-4233-8d39-c261ba683744
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
 
 [ScreenMapping]
 itemsOnDisabledScreens=
