@@ -1,4 +1,5 @@
 [ActionPlugins][0]
+MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 
 [ActionPlugins][1]
@@ -22,7 +23,8 @@ popupHeight=400
 popupWidth=560
 
 [Containments][3][Applets][23][Configuration][Appearance]
-fontWeight=400
+showDate=true
+showSeconds=false
 
 [Containments][3][Applets][24]
 immutability=1
@@ -38,81 +40,68 @@ plugin=org.kde.plasma.panelspacer
 
 [Containments][3][Applets][30]
 immutability=1
-plugin=org.kde.plasma.systemmonitor.cpu
+plugin=org.kde.plasma.systemmonitor
 
 [Containments][3][Applets][30][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-popupHeight=235
-popupWidth=189
+popupHeight=221
+popupWidth=183
 
 [Containments][3][Applets][30][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
-title=CPU
+title=Monitor do sistema\s
+updateRateLimit=2000
 
 [Containments][3][Applets][30][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
+[Containments][3][Applets][30][Configuration][FaceGrid][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+updateRateLimit=2000
+
+[Containments][3][Applets][30][Configuration][FaceGrid][SensorColors]
+cpu/all/averageFrequency=234,133,94
+cpu/all/averageTemperature=234,133,94
+cpu/all/usage=234,133,94
+cpu/loadaverages/loadaverage1=255,126,75
+gpu/gpu1/usage=29,134,42
+gpu/gpu2/usage=170,58,58
+memory/physical/used=130,171,233
+
+[Containments][3][Applets][30][Configuration][FaceGrid][SensorLabels]
+cpu/all/averageFrequency=CPU:Velocidade
+cpu/all/averageTemperature=CPU:Temperatura
+cpu/all/usage=CPU:Uso
+gpu/gpu1/usage=GPU:RTX 4060
+gpu/gpu2/usage=GPU:R780M
+memory/physical/used=RAM
+
+[Containments][3][Applets][30][Configuration][FaceGrid][Sensors]
+highPrioritySensorIds=["gpu/gpu2/usage"]
+
 [Containments][3][Applets][30][Configuration][SensorColors]
-cpu/all/usage=61,174,233
+cpu/all/averageFrequency=234,133,94
+cpu/all/averageTemperature=234,133,94
+cpu/all/usage=234,133,94
+cpu/loadaverages/loadaverage1=255,126,75
+gpu/gpu1/usage=29,134,42
+gpu/gpu2/usage=170,58,58
+memory/physical/used=130,171,233
+
+[Containments][3][Applets][30][Configuration][SensorLabels]
+cpu/all/averageFrequency=CPU:Velocidade
+cpu/all/averageTemperature=CPU:Temperatura
+cpu/all/usage=CPU:Uso
+gpu/gpu1/usage=GPU:RTX 4060
+gpu/gpu2/usage=GPU:R780M
+memory/physical/used=RAM:Uso
 
 [Containments][3][Applets][30][Configuration][Sensors]
 highPrioritySensorIds=["cpu/all/usage"]
-lowPrioritySensorIds=["cpu/all/coreCount"]
+lowPrioritySensorIds=["memory/physical/used"]
 totalSensors=["cpu/all/averageFrequency","cpu/all/averageTemperature"]
-
-[Containments][3][Applets][31]
-immutability=1
-plugin=org.kde.plasma.systemmonitor.memory
-
-[Containments][3][Applets][31][Configuration]
-CurrentPreset=org.kde.plasma.systemmonitor
-popupHeight=235
-popupWidth=230
-
-[Containments][3][Applets][31][Configuration][Appearance]
-chartFace=org.kde.ksysguard.piechart
-title=RAM
-
-[Containments][3][Applets][31][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][3][Applets][31][Configuration][SensorColors]
-memory/physical/used=61,174,233
-
-[Containments][3][Applets][31][Configuration][Sensors]
-highPrioritySensorIds=["memory/physical/used"]
-lowPrioritySensorIds=["memory/physical/total"]
-totalSensors=["memory/physical/used"]
-
-[Containments][3][Applets][32]
-immutability=1
-plugin=org.kde.plasma.systemmonitor.net
-
-[Containments][3][Applets][32][Configuration]
-CurrentPreset=org.kde.plasma.systemmonitor
-popupHeight=195
-popupWidth=252
-
-[Containments][3][Applets][32][Configuration][Appearance]
-chartFace=org.kde.ksysguard.linechart
-title=Rede
-
-[Containments][3][Applets][32][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][3][Applets][32][Configuration][SensorColors]
-network/all/download=61,174,233
-network/all/upload=233,120,61
-
-[Containments][3][Applets][32][Configuration][SensorLabels]
-network/all/download=Download
-network/all/upload=Upload
-
-[Containments][3][Applets][32][Configuration][Sensors]
-highPrioritySensorIds=["network/all/download","network/all/upload"]
 
 [Containments][3][Applets][34]
 immutability=1
@@ -120,84 +109,104 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][3][Applets][34][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-popupHeight=213
-popupWidth=156
+popupHeight=249
+popupWidth=227
 
 [Containments][3][Applets][34][Configuration][Appearance]
-chartFace=org.kde.ksysguard.piechart
-title=GPU 1
+chartFace=org.kde.ksysguard.horizontalbars
+title=GPUs
+updateRateLimit=2000
 
 [Containments][3][Applets][34][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][34][Configuration][SensorColors]
-gpu/gpu0/usage=69,150,68
+gpu/all/usage=114,120,170
+gpu/gpu1/usage=0,85,0
+gpu/gpu2/usage=170,0,0
+gpu/gpu\\d+/usage=154,221,233
 
 [Containments][3][Applets][34][Configuration][SensorLabels]
-gpu/gpu0/usage=RTX 4060
+gpu/gpu1/temperature=RTX: Temperatura
+gpu/gpu1/usage=GPU: RTX 4060
+gpu/gpu2/temperature=780M: Temperatura
+gpu/gpu2/usage=GPU: 780M
 
 [Containments][3][Applets][34][Configuration][Sensors]
-highPrioritySensorIds=["gpu/gpu0/usage"]
-totalSensors=["gpu/gpu0/usedVram","gpu/gpu0/temperature"]
+highPrioritySensorIds=["gpu/gpu2/usage","gpu/gpu1/usage"]
+lowPrioritySensorIds=["gpu/gpu2/temperature","gpu/gpu1/temperature"]
+totalSensors=["gpu/gpu2/usage","gpu/gpu1/usage"]
 
 [Containments][3][Applets][35]
 immutability=1
-plugin=org.kde.plasma.systemmonitor
+plugin=org.kde.plasma.systemmonitor.net
 
 [Containments][3][Applets][35][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-popupHeight=213
-popupWidth=158
+popupHeight=400
+popupWidth=560
 
 [Containments][3][Applets][35][Configuration][Appearance]
-chartFace=org.kde.ksysguard.piechart
-title=GPU 2
+chartFace=org.kde.ksysguard.linechart
+title=Rede
+updateRateLimit=2000
 
 [Containments][3][Applets][35][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][35][Configuration][SensorColors]
-gpu/gpu0/usage=69,150,68
-gpu/gpu1/usage=233,164,61
+network/all/download=79,170,213
+network/all/upload=162,98,208
 
 [Containments][3][Applets][35][Configuration][SensorLabels]
-gpu/gpu1/usage=Radeon 780M
+network/all/download=Download
+network/all/upload=Upload
 
 [Containments][3][Applets][35][Configuration][Sensors]
-highPrioritySensorIds=["gpu/gpu1/usage"]
-totalSensors=["gpu/gpu1/usedVram","gpu/gpu1/temperature"]
+highPrioritySensorIds=["network/all/download","network/all/upload"]
 
 [Containments][3][Applets][4]
 immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][3][Applets][4][Configuration]
-popupHeight=509
+popupHeight=559
 popupWidth=647
 
 [Containments][3][Applets][4][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
+DialogHeight=685
+DialogWidth=936
 
 [Containments][3][Applets][4][Configuration][General]
 applicationsDisplay=0
 favoritesPortedToKAstats=true
-icon=start-here
+icon=start-here-kubuntu
+showAppsByName=true
 switchCategoryOnHover=true
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+
+[Containments][3][Applets][4][Configuration][Shortcuts]
+global=Alt+F1
 
 [Containments][3][Applets][5]
 immutability=1
 plugin=org.kde.plasma.pager
 
+[Containments][3][Applets][5][Configuration][General]
+displayedText=Name
+wrapPage=true
+
 [Containments][3][Applets][6]
 immutability=1
 plugin=org.kde.plasma.icontasks
 
+[Containments][3][Applets][6][Configuration]
+launchers=applications:systemsettings.desktop,applications:org.kubuntu.manage-software.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop,preferred://browser
+
 [Containments][3][Applets][6][Configuration][General]
-launchers=preferred://filemanager
+launchers=applications:org.kde.dolphin.desktop
 
 [Containments][3][Applets][7]
 immutability=1
@@ -271,17 +280,17 @@ plugin=org.kde.plasma.weather
 
 [Containments][3][Applets][8][Applets][25]
 immutability=1
-plugin=org.kde.plasma.bluetooth
+plugin=org.kde.plasma.battery
 
 [Containments][3][Applets][8][Applets][26]
 immutability=1
-plugin=org.kde.plasma.battery
+plugin=org.kde.plasma.brightness
 
 [Containments][3][Applets][8][Applets][27]
 immutability=1
-plugin=org.kde.plasma.brightness
+plugin=org.kde.plasma.bluetooth
 
-[Containments][3][Applets][8][Applets][36]
+[Containments][3][Applets][8][Applets][31]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
@@ -290,17 +299,17 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][3][Applets][8][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.weather
-knownItems=org.kde.kdeconnect,org.kde.plasma.vault,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.weather
+extraItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.vault,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.weather
+knownItems=org.kde.kdeconnect,org.kde.kupapplet,org.kde.plasma.vault,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.weather
 
 [Containments][3][General]
-AppletOrder=30;31;35;34;32;29;4;5;6;28;7;8;23;24
+AppletOrder=30;34;35;29;4;5;6;28;7;8;23;24
 
 [Containments][36]
 ItemGeometries-1707x960=
 ItemGeometries-2048x1152=
 ItemGeometriesHorizontal=
-activityId=fd3b8b97-86a3-4233-8d39-c261ba683744
+activityId=387a1167-f091-40a7-a4ec-366b06e1caec
 formfactor=0
 immutability=1
 lastScreen=0
@@ -309,7 +318,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][37]
-activityId=fd3b8b97-86a3-4233-8d39-c261ba683744
+activityId=387a1167-f091-40a7-a4ec-366b06e1caec
 formfactor=0
 immutability=1
 lastScreen=1
@@ -319,4 +328,4 @@ wallpaperplugin=org.kde.image
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=
+screenMapping=desktop:/org.kubuntu.web.home.desktop,0,387a1167-f091-40a7-a4ec-366b06e1caec,desktop:/org.kfocus.web.howtos.desktop,0,239f2d42-3d49-4fd5-9a63-8a0a96e96e83,desktop:/org.kfocus.web.howtos.desktop,0,387a1167-f091-40a7-a4ec-366b06e1caec

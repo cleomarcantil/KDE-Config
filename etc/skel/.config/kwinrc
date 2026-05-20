@@ -1,15 +1,27 @@
 [Desktops]
-Id_1=9add9772-9b92-4ff4-bd46-5b19f73bfbfd
+Id_1=601b832c-803f-4024-93a7-ae19bc3993aa
 Number=1
 Rows=1
 
-[Tiling][9add9772-9b92-4ff4-bd46-5b19f73bfbfd][a19b9ba2-09aa-4a84-b665-4b09eaed988c]
-padding=4
-tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"vertical","tiles":[{"height":0.7958333333333323},{"height":0.20416666666666772}],"width":0.6261718750000018},{"layoutDirection":"floating","tiles":[{"height":0.42499999999999455,"width":0.3730468749999982,"x":0.6261718750000018,"y":0.2527777777777774},{"height":0.2951388888888886,"width":0.28124999999999556,"x":0.7175781250000045,"y":0.6784722222222207}],"width":0.3738281249999982}]}
+[NightColor]
+Active=true
+Mode=DarkLight
 
-[Tiling][9add9772-9b92-4ff4-bd46-5b19f73bfbfd][bf8293ca-b9f1-475a-9241-b8143b225137]
+[Tiling][601b832c-803f-4024-93a7-ae19bc3993aa][35f6dd38-4340-4934-9e59-ee183f3f4a2a]
 padding=4
-tiles={"layoutDirection":"horizontal","tiles":[{"layoutDirection":"floating","tiles":[{"height":0.2489583333333335,"width":0.2404296875000021,"x":0.00020503807850031437,"y":0},{"height":0.3375000000000008,"width":0.30917968750000113,"x":0,"y":0.6624999999999992}],"width":0.30917968750000113},{"width":0.6908203124999989}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][601b832c-803f-4024-93a7-ae19bc3993aa][39e8daba-8ac2-4d8c-ae71-b84c75af095d]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][601b832c-803f-4024-93a7-ae19bc3993aa][604aada3-320c-41ea-825a-d5e8a5b0f70b]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][601b832c-803f-4024-93a7-ae19bc3993aa][c4f17074-18a1-4ffb-91f8-b06ffaf750ef]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Xwayland]
 Scale=1.5
